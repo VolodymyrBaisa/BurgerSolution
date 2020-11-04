@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //outline: 1px solid #66b8da !important;
+}
+//Fonts
+@font-face {
+    font-family: Rockwell;
+    src: url("assets/fonts/rockwell-condensed.woff");
+}
+
+html {
+    font-size: 0.65vw;
+    font-family: "Rockwell", sans-serif;
+    font-stretch: ultra-condensed;
+}
+
+body {
+    font-size: 1.6rem;
+    @include flex(center, center, column);
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
