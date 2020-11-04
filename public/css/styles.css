@@ -39,8 +39,8 @@ section {
 }
 
 section {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 56, 56, 0.6)), to(rgba(56, 56, 56, 0.6))), url("/public/img/Background.png") center center no-repeat;
-  background: linear-gradient(180deg, rgba(56, 56, 56, 0.6) 0%, rgba(56, 56, 56, 0.6) 100%), url("/public/img/Background.png") center center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 56, 56, 0.6)), to(rgba(56, 56, 56, 0.6))), url("/img/Background.png") center center no-repeat;
+  background: linear-gradient(180deg, rgba(56, 56, 56, 0.6) 0%, rgba(56, 56, 56, 0.6) 100%), url("/img/Background.png") center center no-repeat;
   background-size: cover;
 }
 
@@ -132,7 +132,7 @@ section .burger-img {
   height: 20vw;
   width: 20vw;
   margin: 1.5vw 0.5vw;
-  background: url("/public/img/Burger.png") center center no-repeat;
+  background: url("/img/Burger.png") center center no-repeat;
   background-size: 100% 100%;
 }
 
