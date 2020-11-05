@@ -6,7 +6,10 @@ module.exports = class ORM {
         const q = `SELECT * FROM ${table};`;
         return await this.query(q);
     }
-    async create() {}
+    async create(table, val) {
+        const q = `INSERT INTO ${table} SET ?`;
+        await this.query(q, val);
+    }
     async update() {}
 
     async quire(q) {

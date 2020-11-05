@@ -5,12 +5,12 @@ const DbManager = require("../../models/dbManager.js");
 const db = new DbManager();
 
 router.get("/", async (req, res) => {
-    console.log(await db.getAll());
     res.render("index", { burger_data: await db.getAll() });
 });
 
-router.post("/add", (req, res) => {
-    console.log(req.body);
+router.post("/add", async (req, res) => {
+    const burgerData = req.body;
+    if (burgerData) await db.create(burgerData);
     res.redirect("/");
 });
 
