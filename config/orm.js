@@ -1,0 +1,19 @@
+const connection = require("./connection.js");
+const { promisify } = require("util");
+
+module.exports = class ORM {
+    async getAll(table) {
+        const q = `SELECT * FROM ${table};`;
+        this.query(q);
+    }
+    async create() {}
+    async update() {}
+
+    async quire(q) {
+        return (await promisify(connection.query).bind(connection))(q);
+    }
+
+    async query(q, ...args) {
+        return (await promisify(connection.query).bind(connection))(q, ...args);
+    }
+};
