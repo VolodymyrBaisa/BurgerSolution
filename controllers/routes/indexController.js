@@ -1,17 +1,19 @@
 const express = require("express");
 
 const router = express.Router();
+const DbManager = require("../../models/dbManager.js");
+const db = new DbManager();
 
-router.get("/", function (req, res) {
-    res.render("index");
+router.get("/", async (req, res) => {
+    res.render("index", { burger_data: await db.getAll() });
 });
 
-router.post("/add", function (req, res) {
+router.post("/add", (req, res) => {
     console.log(req.body);
     res.redirect("/");
 });
 
-router.put("/remove/:id", function (req, res) {
+router.put("/remove/:id", (req, res) => {
     const id = req.params.id;
     console.log(id);
     res.sendStatus(200);
