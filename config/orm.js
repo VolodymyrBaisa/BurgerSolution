@@ -4,7 +4,7 @@ const { promisify } = require("util");
 module.exports = class ORM {
     async getAll(table) {
         const q = `SELECT * FROM ${table};`;
-        this.query(q);
+        return await this.query(q);
     }
     async create() {}
     async update() {}

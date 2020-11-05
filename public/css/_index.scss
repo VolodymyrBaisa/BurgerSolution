@@ -110,6 +110,7 @@ section {
 
     .submit-order-container {
         @include flex(center, center, row);
+        margin-bottom: 2vw;
         input[type="text"] {
             width: 50%;
             background: rgba(244, 244, 244, 0.4);

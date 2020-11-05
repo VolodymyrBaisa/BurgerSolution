@@ -17,8 +17,10 @@
             </div>
             <div class="order-container">
                 <div class="order-left-container">
-                    <div data-index="uuid" class="burger">
-                        1. Deluxe Burger<span class="button-remove">
+                    {{#each burger_data}}
+                    {{#unless this.devoured}}
+                    <div data-index="{{this.id}}" class="burger">
+                        {{this.id}}. {{this.burger_name}}<span class="button-remove">
                             <!-- prettier-ignore -->
                             <svg class="eat-icon" preserveAspectRatio="none" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.0781 4.05811V12.8807" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -28,6 +30,8 @@
                                 </svg>
                         </span>
                     </div>
+                    {{/unless}}
+                    {{/each}}
                 </div>
                 <div class="order-right-container">
                     <div class="burger-devoured" data-index="uuid">1. Deluxe Burger</div>

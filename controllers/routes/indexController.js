@@ -5,6 +5,7 @@ const DbManager = require("../../models/dbManager.js");
 const db = new DbManager();
 
 router.get("/", async (req, res) => {
+    console.log(await db.getAll());
     res.render("index", { burger_data: await db.getAll() });
 });
 
