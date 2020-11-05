@@ -61,6 +61,9 @@ section {
     .order-container {
         @include flex(space-around, center, row);
         .order-left-container {
+            div:nth-child(1) {
+                margin-top: 0;
+            }
             div {
                 @include flex(flex-start, center, row);
                 position: relative;
@@ -71,6 +74,7 @@ section {
                 color: #f4f4f4;
                 font-size: 1.6vw;
                 padding: 1vw;
+                margin-top: 0.5vw;
                 .button-remove {
                     position: absolute;
                     right: 1vw;

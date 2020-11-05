@@ -151,6 +151,10 @@ section .order-container {
           flex-direction: row;
 }
 
+section .order-container .order-left-container div:nth-child(1) {
+  margin-top: 0;
+}
+
 section .order-container .order-left-container div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,6 +177,7 @@ section .order-container .order-left-container div {
   color: #f4f4f4;
   font-size: 1.6vw;
   padding: 1vw;
+  margin-top: 0.5vw;
 }
 
 section .order-container .order-left-container div .button-remove {
