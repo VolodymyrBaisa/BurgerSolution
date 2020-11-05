@@ -10,7 +10,10 @@ module.exports = class ORM {
         const q = `INSERT INTO ${table} SET ?`;
         await this.query(q, val);
     }
-    async update() {}
+    async update(table, val, where) {
+        const q = `UPDATE ${table} SET ? WHERE ?`;
+        await this.query(q, [val, where]);
+    }
 
     async quire(q) {
         return (await promisify(connection.query).bind(connection))(q);

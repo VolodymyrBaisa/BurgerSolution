@@ -34,7 +34,11 @@
                     {{/each}}
                 </div>
                 <div class="order-right-container">
-                    <div class="burger-devoured" data-index="uuid">1. Deluxe Burger</div>
+                    {{#each burger_data}}
+                    {{#if this.devoured}}
+                    <div class="burger-devoured" data-index="{{this.id}}">{{this.id}}. {{this.burger_name}}</div>
+                     {{/if}}
+                    {{/each}}
                 </div>
             </div>
             <hr />

@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: Rockwell;
-  src: url("assets/fonts/rockwell-condensed.woff");
+  src: url("/fonts/rockwell-condensed.woff");
 }
 
 html {
@@ -151,11 +151,13 @@ section .order-container {
           flex-direction: row;
 }
 
-section .order-container .order-left-container div:nth-child(1) {
+section .order-container .order-left-container div:nth-child(1),
+section .order-container .order-right-container div:nth-child(1) {
   margin-top: 0;
 }
 
-section .order-container .order-left-container div {
+section .order-container .order-left-container div,
+section .order-container .order-right-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,14 +182,16 @@ section .order-container .order-left-container div {
   margin-top: 0.5vw;
 }
 
-section .order-container .order-left-container div .button-remove {
+section .order-container .order-left-container div .button-remove,
+section .order-container .order-right-container div .button-remove {
   position: absolute;
   right: 1vw;
   border-left: 1px solid #f4f4ff;
   cursor: pointer;
 }
 
-section .order-container .order-left-container div .button-remove .eat-icon {
+section .order-container .order-left-container div .button-remove .eat-icon,
+section .order-container .order-right-container div .button-remove .eat-icon {
   width: 2vw;
 }
 

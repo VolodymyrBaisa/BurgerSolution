@@ -60,7 +60,8 @@ section {
 
     .order-container {
         @include flex(space-around, center, row);
-        .order-left-container {
+        .order-left-container,
+        .order-right-container {
             div:nth-child(1) {
                 margin-top: 0;
             }

@@ -14,9 +14,9 @@ router.post("/add", async (req, res) => {
     res.redirect("/");
 });
 
-router.put("/remove/:id", (req, res) => {
+router.put("/remove/:id", async (req, res) => {
     const id = req.params.id;
-    console.log(id);
+    if (id) await db.update(id);
     res.sendStatus(200);
 });
 

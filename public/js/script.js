@@ -1,6 +1,5 @@
 const submitButtonEl = $(".submit");
 const inputEl = $(".input-order");
-const burgerDevouredEl = $(".burger-devoured");
 const eatBurgerButtonEl = $(".eat-icon");
 
 (() => {
@@ -11,13 +10,14 @@ const eatBurgerButtonEl = $(".eat-icon");
             data: {
                 burger_name: inputEl.val(),
             },
-        }).fail((err) => console.error(err));
+        })
+            .then(() => location.reload())
+            .fail((err) => console.error(err));
     });
 
-    eatBurgerButtonEl.on("click", () => {
-        const id = burgerDevouredEl.data("index");
+    eatBurgerButtonEl.on("click", (e) => {
+        const id = $(e.target).parents(".burger").data("index");
         if (!id) return;
-        console.log(id);
         $.ajax({
             method: "PUT",
             url: "/remove/" + id,

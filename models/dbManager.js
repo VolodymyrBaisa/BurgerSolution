@@ -12,5 +12,7 @@ module.exports = class Burger {
         await orm.create(tableName, val);
     }
 
-    async update() {}
+    async update(where) {
+        await orm.update(tableName, { devoured: true }, { id: where });
+    }
 };
